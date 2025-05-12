@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="white"/>
+  <g stroke="black" stroke-width="2" fill="none">
+    <!-- Cube net -->
+    <rect x="70" y="10" width="60" height="60"/> <!-- Top -->
+    <rect x="70" y="70" width="60" height="60"/> <!-- Front -->
+    <rect x="70" y="130" width="60" height="60"/> <!-- Bottom -->
+    <rect x="10" y="70" width="60" height="60"/> <!-- Left -->
+    <rect x="130" y="70" width="60" height="60"/> <!-- Right -->
+    <rect x="190" y="70" width="60" height="60"/> <!-- Back -->
+    
+    <!-- Patterns -->
+    <circle cx="100" cy="40" r="15"/>
+    <rect x="85" y="85" width="30" height="30"/>
+    <path d="M100 145 L115 175 L85 175 Z"/>
+    <circle cx="40" cy="100" r="15"/>
+    <path d="M160 85 L175 115 L145 115 Z"/>
+    <rect x="205" y="85" width="30" height="30"/>
+  </g>
+</svg> 

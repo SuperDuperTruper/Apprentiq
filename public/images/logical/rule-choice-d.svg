@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .shape { fill: #00ff94; }
+    </style>
+
+    <!-- Choice D: Three circles rotated (incorrect) -->
+    <g transform="translate(100, 100)">
+        <g transform="rotate(90)">
+            <circle cx="-40" cy="0" r="20" class="shape"/>
+            <circle cx="0" cy="0" r="20" class="shape"/>
+            <circle cx="40" cy="0" r="20" class="shape"/>
+        </g>
+    </g>
+</svg> 

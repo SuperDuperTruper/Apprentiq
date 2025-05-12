@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        text { font-family: Arial; fill: white; }
+        .axis { stroke: #666; stroke-width: 1; }
+        .bar1 { fill: #00ff94; }
+        .bar2 { fill: #ff4444; }
+        .bar3 { fill: #ffaa44; }
+        .grid { stroke: #333; stroke-width: 1; }
+    </style>
+    
+    <!-- Grid -->
+    <g>
+        <line x1="50" y1="50" x2="50" y2="350" class="axis"/>
+        <line x1="50" y1="350" x2="550" y2="350" class="axis"/>
+        
+        <!-- Horizontal grid -->
+        <line x1="50" y1="50" x2="550" y2="50" class="grid"/>
+        <line x1="50" y1="150" x2="550" y2="150" class="grid"/>
+        <line x1="50" y1="250" x2="550" y2="250" class="grid"/>
+    </g>
+
+    <!-- Bars -->
+    <g>
+        <!-- Plant A -->
+        <rect x="100" y="230" width="80" height="120" class="bar1"/>
+        <!-- Plant B -->
+        <rect x="250" y="260" width="80" height="90" class="bar2"/>
+        <!-- Plant C -->
+        <rect x="400" y="290" width="80" height="60" class="bar3"/>
+    </g>
+
+    <!-- Y-axis labels -->
+    <text x="10" y="50">15cm</text>
+    <text x="10" y="150">10cm</text>
+    <text x="10" y="250">5cm</text>
+    <text x="10" y="350">0cm</text>
+
+    <!-- X-axis labels -->
+    <text x="140" y="380">Plant A</text>
+    <text x="290" y="380">Plant B</text>
+    <text x="440" y="380">Plant C</text>
+
+    <!-- Title -->
+    <text x="300" y="30" text-anchor="middle" font-size="20">Plant Growth After 30 Days</text>
+</svg> 

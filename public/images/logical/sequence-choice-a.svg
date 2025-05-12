@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .circle-outline { fill: none; stroke: #00ff94; stroke-width: 3; }
+    </style>
+
+    <!-- Choice A: Four outlined circles (incorrect) -->
+    <g transform="translate(100, 100)">
+        <circle cx="0" cy="-30" r="15" class="circle-outline"/>
+        <circle cx="30" cy="0" r="15" class="circle-outline"/>
+        <circle cx="0" cy="30" r="15" class="circle-outline"/>
+        <circle cx="-30" cy="0" r="15" class="circle-outline"/>
+    </g>
+</svg> 

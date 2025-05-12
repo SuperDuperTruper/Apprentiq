@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .circle-filled { fill: #00ff94; }
+    </style>
+
+    <!-- Choice C: Four filled circles (incorrect) -->
+    <g transform="translate(100, 100)">
+        <circle cx="0" cy="-30" r="15" class="circle-filled"/>
+        <circle cx="30" cy="0" r="15" class="circle-filled"/>
+        <circle cx="0" cy="30" r="15" class="circle-filled"/>
+        <circle cx="-30" cy="0" r="15" class="circle-filled"/>
+    </g>
+</svg> 

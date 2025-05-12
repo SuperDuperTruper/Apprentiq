@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .shape-outline { fill: none; stroke: #00ff94; stroke-width: 3; }
+    </style>
+
+    <!-- Choice A: Outlined square rotated 90° (incorrect) -->
+    <g transform="translate(100, 100)">
+        <rect x="-40" y="-40" width="80" height="80" transform="rotate(90)" class="shape-outline"/>
+    </g>
+</svg> 

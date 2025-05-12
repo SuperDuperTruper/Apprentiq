@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="100" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="100" fill="white"/>
+  <g stroke="black" stroke-width="2" fill="none">
+    <!-- First shape -->
+    <path d="M30 50 L50 20 L70 50 Z"/>
+    
+    <!-- Second shape -->
+    <path d="M95 50 L115 20 L135 50 Z"/>
+    <path d="M115 35 L135 65 L95 65 Z"/>
+    
+    <!-- Third shape -->
+    <path d="M160 50 L180 20 L200 50 Z"/>
+    <path d="M180 35 L200 65 L160 65 Z"/>
+    <path d="M180 50 L160 20 L200 20 Z"/>
+    
+    <!-- Fourth shape -->
+    <path d="M225 50 L245 20 L265 50 Z"/>
+    <path d="M245 35 L265 65 L225 65 Z"/>
+    <path d="M245 50 L225 20 L265 20 Z"/>
+    <path d="M245 65 L225 35 L265 35 Z"/>
+  </g>
+</svg> 

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="200" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        text { font-family: Arial; fill: white; }
+        .shape-filled { fill: #00ff94; }
+        .shape-outline { fill: none; stroke: #00ff94; stroke-width: 3; }
+    </style>
+
+    <!-- Question sequence -->
+    <g transform="translate(50, 100)">
+        <!-- Shape 1: Filled square -->
+        <rect x="0" y="-40" width="80" height="80" class="shape-filled"/>
+        
+        <!-- Shape 2: Outlined square rotated 45° -->
+        <g transform="translate(150, 0)">
+            <rect x="-40" y="-40" width="80" height="80" transform="rotate(45)" class="shape-outline"/>
+        </g>
+        
+        <!-- Shape 3: Filled square rotated 90° -->
+        <g transform="translate(300, 0)">
+            <rect x="-40" y="-40" width="80" height="80" transform="rotate(90)" class="shape-filled"/>
+        </g>
+
+        <!-- Shape 4: Outlined square rotated 135° -->
+        <g transform="translate(450, 0)">
+            <rect x="-40" y="-40" width="80" height="80" transform="rotate(135)" class="shape-outline"/>
+        </g>
+
+        <!-- Question mark -->
+        <text x="600" y="20" font-size="60" text-anchor="middle">?</text>
+    </g>
+</svg> 

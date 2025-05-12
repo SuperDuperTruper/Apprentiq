@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        text { font-family: Arial; fill: white; }
+        .slice1 { fill: #00ff94; }
+        .slice2 { fill: #ff4444; }
+        .slice3 { fill: #ffaa44; }
+        .slice4 { fill: #44aaff; }
+    </style>
+
+    <!-- Pie chart -->
+    <g transform="translate(300, 200)">
+        <!-- Sleep (33%) -->
+        <path d="M 0 0 L 150 0 A 150 150 0 0 1 -75 129.9038105676658 L 0 0" class="slice1"/>
+        <!-- Study (25%) -->
+        <path d="M 0 0 L -75 129.9038105676658 A 150 150 0 0 1 -150 0 L 0 0" class="slice2"/>
+        <!-- Free time (25%) -->
+        <path d="M 0 0 L -150 0 A 150 150 0 0 1 -75 -129.9038105676658 L 0 0" class="slice3"/>
+        <!-- Other (17%) -->
+        <path d="M 0 0 L -75 -129.9038105676658 A 150 150 0 0 1 150 0 L 0 0" class="slice4"/>
+    </g>
+
+    <!-- Labels -->
+    <g>
+        <text x="450" y="180">Sleep (33%)</text>
+        <text x="150" y="300">Study (25%)</text>
+        <text x="150" y="100">Free time (25%)</text>
+        <text x="450" y="300">Other (17%)</text>
+    </g>
+
+    <!-- Title -->
+    <text x="300" y="30" text-anchor="middle" font-size="20">Student's Daily Time Distribution</text>
+</svg> 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .shape { fill: #00ff94; }
+    </style>
+
+    <!-- Choice A: Six circles rotated 90° (correct) -->
+    <g transform="translate(100, 100)">
+        <g transform="rotate(90)">
+            <circle cx="-50" cy="-30" r="20" class="shape"/>
+            <circle cx="0" cy="-30" r="20" class="shape"/>
+            <circle cx="50" cy="-30" r="20" class="shape"/>
+            <circle cx="-50" cy="30" r="20" class="shape"/>
+            <circle cx="0" cy="30" r="20" class="shape"/>
+            <circle cx="50" cy="30" r="20" class="shape"/>
+        </g>
+    </g>
+</svg> 

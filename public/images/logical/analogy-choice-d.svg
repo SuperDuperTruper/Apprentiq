@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .shape { fill: none; stroke: #00ff94; stroke-width: 2; }
+    </style>
+
+    <!-- Choice D: Rectangle (incorrect) -->
+    <g transform="translate(100, 100)">
+        <rect x="-60" y="-40" width="120" height="80" class="shape"/>
+        <line x1="-60" y1="-40" x2="-40" y2="-60" class="shape"/>
+        <line x1="60" y1="-40" x2="80" y2="-60" class="shape"/>
+        <line x1="60" y1="40" x2="80" y2="20" class="shape"/>
+        <line x1="-60" y1="40" x2="-40" y2="20" class="shape"/>
+ 

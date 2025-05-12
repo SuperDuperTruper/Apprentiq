@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        text { font-family: Arial; fill: white; }
+        .axis { stroke: #666; stroke-width: 1; }
+        .line { stroke: #00ff94; stroke-width: 2; fill: none; }
+        .grid { stroke: #333; stroke-width: 1; }
+    </style>
+    
+    <!-- Grid -->
+    <g>
+        <line x1="50" y1="50" x2="50" y2="350" class="axis"/>
+        <line x1="50" y1="350" x2="550" y2="350" class="axis"/>
+        
+        <!-- Vertical grid -->
+        <line x1="50" y1="50" x2="550" y2="50" class="grid"/>
+        <line x1="50" y1="150" x2="550" y2="150" class="grid"/>
+        <line x1="50" y1="250" x2="550" y2="250" class="grid"/>
+    </g>
+
+    <!-- Data line -->
+    <polyline
+        points="
+            50,250   <!-- Jan -->
+            90,200   <!-- Feb -->
+            130,150  <!-- Mar -->
+            170,100  <!-- Apr -->
+            210,80   <!-- May -->
+            250,60   <!-- Jun -->
+            290,50   <!-- Jul -->
+            330,70   <!-- Aug -->
+            370,120  <!-- Sep -->
+            410,180  <!-- Oct -->
+            450,220  <!-- Nov -->
+            490,250  <!-- Dec -->
+        "
+        class="line"
+    />
+
+    <!-- Y-axis labels -->
+    <text x="10" y="50">600</text>
+    <text x="10" y="150">400</text>
+    <text x="10" y="250">200</text>
+    <text x="10" y="350">0</text>
+
+    <!-- X-axis labels -->
+    <text x="50" y="370">Jan</text>
+    <text x="130" y="370">Mar</text>
+    <text x="210" y="370">May</text>
+    <text x="290" y="370">Jul</text>
+    <text x="370" y="370">Sep</text>
+    <text x="450" y="370">Nov</text>
+
+    <!-- Title -->
+ 

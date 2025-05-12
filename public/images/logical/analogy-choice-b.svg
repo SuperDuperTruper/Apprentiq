@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .shape { fill: none; stroke: #00ff94; stroke-width: 2; }
+    </style>
+
+    <!-- Choice B: Pyramid (incorrect) -->
+    <g transform="translate(100, 100)">
+        <path d="M -40,40 L 40,40 L 0,-40 Z" class="shape"/>
+        <path d="M -40,40 L 0,-40 L 0,40 Z" class="shape" style="opacity: 0.5"/>
+        <path d="M 40,40 L 0,-40 L 0,40 Z" class="shape"/>
+    </g>
+</svg> 

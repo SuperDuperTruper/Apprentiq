@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .shape { fill: none; stroke: #00ff94; stroke-width: 2; }
+    </style>
+
+    <!-- Choice C: Cube (correct) -->
+    <g transform="translate(100, 100)">
+        <!-- Front face -->
+        <rect x="-40" y="-40" width="80" height="80" class="shape"/>
+        
+        <!-- Back face -->
+        <g transform="translate(-20, -20)">
+            <rect x="-40" y="-40" width="80" height="80" class="shape" style="opacity: 0.5"/>
+        </g>
+        
+        <!-- Connecting lines -->
+        <line x1="-40" y1="-40" x2="-60" y2="-60" class="shape"/>
+        <line x1="40" y1="-40" x2="20" y2="-60" class="shape"/>
+        <line x1="40" y1="40" x2="20" y2="20" class="shape"/>
+        <line x1="-40" y1="40" x2="-60" y2="20" class="shape"/>
+    </g>
+</svg> 

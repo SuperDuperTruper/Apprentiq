@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="200" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        text { font-family: Arial; fill: white; }
+        .shape { fill: #00ff94; }
+    </style>
+
+    <!-- Example pair -->
+    <g transform="translate(50, 100)">
+        <!-- First shape: Two triangles -->
+        <g>
+            <path d="M 0,-30 L 30,30 L -30,30 Z" class="shape"/>
+            <path d="M 60,-30 L 90,30 L 30,30 Z" class="shape"/>
+        </g>
+        
+        <!-- Arrow -->
+        <text x="150" y="10" font-size="40">→</text>
+        
+        <!-- Second shape: Four triangles rotated -->
+        <g transform="translate(250, 0)">
+            <g transform="rotate(90)">
+                <path d="M 0,-30 L 30,30 L -30,30 Z" class="shape"/>
+                <path d="M 60,-30 L 90,30 L 30,30 Z" class="shape"/>
+                <path d="M 0,30 L 30,90 L -30,90 Z" class="shape"/>
+                <path d="M 60,30 L 90,90 L 30,90 Z" class="shape"/>
+            </g>
+        </g>
+    </g>
+
+    <!-- Test pair -->
+    <g transform="translate(400, 100)">
+        <!-- First shape: Three circles -->
+        <g>
+            <circle cx="0" cy="0" r="20" class="shape"/>
+            <circle cx="50" cy="0" r="20" class="shape"/>
+            <circle cx="100" cy="0" r="20" class="shape"/>
+        </g>
+        
+        <!-- Arrow -->
+        <text x="150" y="10" font-size="40">→</text>
+        
+        <!-- Question mark -->
+        <text x="250" y="10" font-size="40">?</text>
+    </g>
+</svg> 

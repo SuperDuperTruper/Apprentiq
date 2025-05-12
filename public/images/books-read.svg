@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        text { font-family: Arial; fill: white; }
+        .axis { stroke: #666; stroke-width: 1; }
+        .bar { fill: #00ff94; }
+        .grid { stroke: #333; stroke-width: 1; }
+    </style>
+    
+    <!-- Grid -->
+    <g>
+        <line x1="50" y1="50" x2="50" y2="350" class="axis"/>
+        <line x1="50" y1="350" x2="550" y2="350" class="axis"/>
+        
+        <!-- Horizontal grid -->
+        <line x1="50" y1="50" x2="550" y2="50" class="grid"/>
+        <line x1="50" y1="150" x2="550" y2="150" class="grid"/>
+        <line x1="50" y1="250" x2="550" y2="250" class="grid"/>
+    </g>
+
+    <!-- Bars -->
+    <g>
+        <rect x="70" y="290" width="60" height="60" class="bar"/>  <!-- Jan: 2 -->
+        <rect x="140" y="260" width="60" height="90" class="bar"/> <!-- Feb: 3 -->
+        <rect x="210" y="230" width="60" height="120" class="bar"/> <!-- Mar: 4 -->
+        <rect x="280" y="290" width="60" height="60" class="bar"/> <!-- Apr: 2 -->
+        <rect x="350" y="320" width="60" height="30" class="bar"/> <!-- May: 1 -->
+        <rect x="420" y="260" width="60" height="90" class="bar"/> <!-- Jun: 3 -->
+    </g>
+
+    <!-- Y-axis labels -->
+    <text x="10" y="50">6</text>
+    <text x="10" y="150">4</text>
+    <text x="10" y="250">2</text>
+    <text x="10" y="350">0</text>
+
+    <!-- X-axis labels -->
+    <text x="100" y="380">Jan</text>
+    <text x="170" y="380">Feb</text>
+    <text x="240" y="380">Mar</text>
+    <text x="310" y="380">Apr</text>
+    <text x="380" y="380">May</text>
+    <text x="450" y="380">Jun</text>
+
+    <!-- Title -->
+    <text x="300" y="30" text-anchor="middle" font-size="20">Books Read Per Month</text>
+</svg> 

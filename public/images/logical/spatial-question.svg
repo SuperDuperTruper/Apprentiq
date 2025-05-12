@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        text { font-family: Arial; fill: white; }
+        .outline { fill: none; stroke: #00ff94; stroke-width: 2; }
+        .pattern1 { fill: #00ff94; }
+        .pattern2 { fill: none; stroke: #00ff94; stroke-width: 2; }
+        .fold { stroke: #666; stroke-width: 1; stroke-dasharray: 5,5; }
+    </style>
+
+    <!-- Cube net -->
+    <g transform="translate(400, 200)">
+        <!-- Center face -->
+        <rect x="-50" y="-50" width="100" height="100" class="outline"/>
+        <circle cx="0" cy="0" r="30" class="pattern1"/>
+        
+        <!-- Top face -->
+        <g transform="translate(0, -100)">
+            <rect x="-50" y="-50" width="100" height="100" class="outline"/>
+            <path d="M -30,-30 L 30,30 M -30,30 L 30,-30" class="pattern2"/>
+        </g>
+        
+        <!-- Right face -->
+        <g transform="translate(100, 0)">
+            <rect x="-50" y="-50" width="100" height="100" class="outline"/>
+            <circle cx="0" cy="0" r="30" class="pattern2"/>
+        </g>
+        
+        <!-- Bottom face -->
+        <g transform="translate(0, 100)">
+            <rect x="-50" y="-50" width="100" height="100" class="outline"/>
+            <path d="M -30,-30 L 30,30 M -30,30 L 30,-30" class="pattern1"/>
+        </g>
+        
+        <!-- Left face -->
+        <g transform="translate(-100, 0)">
+            <rect x="-50" y="-50" width="100" height="100" class="outline"/>
+            <circle cx="0" cy="0" r="30" class="pattern2"/>
+        </g>
+        
+        <!-- Back face -->
+        <g transform="translate(-200, 0)">
+            <rect x="-50" y="-50" width="100" height="100" class="outline"/>
+            <circle cx="0" cy="0" r="30" class="pattern1"/>
+        </g>
+
+        <!-- Fold lines -->
+        <line x1="-150" y1="-50" x2="50" y2="-50" class="fold"/>
+        <line x1="-150" y1="50" x2="50" y2="50" class="fold"/>
+        <line x1="-50" y1="-150" x2="-50" y2="150" class="fold"/>
+        <line x1="50" y1="-150" x2="50" y2="150" class="fold"/>
+    </g>
+</svg> 

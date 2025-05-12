@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .outline { fill: none; stroke: #00ff94; stroke-width: 2; }
+        .pattern1 { fill: #00ff94; }
+        .pattern2 { fill: none; stroke: #00ff94; stroke-width: 2; }
+    </style>
+
+    <!-- Choice D: Correct cube -->
+    <g transform="translate(100, 100)">
+        <!-- Front face -->
+        <g transform="skewY(-30)">
+            <rect x="-40" y="-40" width="80" height="80" class="outline"/>
+            <circle cx="0" cy="0" r="25" class="pattern1"/>
+        </g>
+        
+        <!-- Top face -->
+        <g transform="skewX(30) translate(0, -40)">
+            <rect x="-40" y="-40" width="80" height="80" class="outline"/>
+            <path d="M -25,-25 L 25,25 M -25,25 L 25,-25" class="pattern2"/>
+        </g>
+        
+        <!-- Right face -->
+        <g transform="skewY(30) translate(40, 0)">
+            <rect x="-40" y="-40" width="80" height="80" class="outline"/>
+            <circle cx="0" cy="0" r="25" class="pattern2"/>
+        </g>
+    </g>
+</svg> 
