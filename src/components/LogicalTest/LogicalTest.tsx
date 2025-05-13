@@ -38,6 +38,7 @@ export default function LogicalTest() {
   const [timeLeft, setTimeLeft] = useState(120); // 2 minutes per question
   const [isTestComplete, setIsTestComplete] = useState(false);
   const [testStarted, setTestStarted] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   // Initialize test with random questions
   useEffect(() => {
@@ -86,7 +87,10 @@ export default function LogicalTest() {
     }
   };
 
-  const handleStartTest = () => {
+  const handleStartTest = async () => {
+    setIsTransitioning(true);
+    // Wait for fade out animation
+    await new Promise(resolve => setTimeout(resolve, 500));
     setTestStarted(true);
   };
 
@@ -95,9 +99,14 @@ export default function LogicalTest() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -20 }}
         className="max-w-4xl mx-auto p-6"
       >
-        <Card className="p-8 bg-gradient-to-br from-gray-800 to-gray-900 border-gray-700">
+        <Card className={`p-8 border-gray-700 transition-all duration-500 ${
+          isTransitioning 
+            ? 'bg-black opacity-0' 
+            : 'bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm'
+        }`}>
           <div className="flex items-center space-x-3 mb-6">
             <Brain className="w-8 h-8 text-purple-500" />
             <h1 className="text-3xl font-bold text-white">Logical Reasoning Test</h1>

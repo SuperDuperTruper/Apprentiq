@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="120" rx="12" fill="#0F172A" fill-opacity="0.1"/>
+  <!-- Briefcase -->
+  <rect x="25" y="45" width="70" height="45" rx="4" stroke="#0F172A" stroke-width="3" fill="none"/>
+  <!-- Handle -->
+  <path d="M45 45 L45 35 L75 35 L75 45" stroke="#0F172A" stroke-width="3" fill="none"/>
+  <!-- Graph -->
+  <path d="M35 65 L55 55 L75 70 L85 60" stroke="#0F172A" stroke-width="2" fill="none"/>
+  <!-- Points -->
+  <circle cx="35" cy="65" r="2" fill="#0F172A"/>
+  <circle cx="55" cy="55" r="2" fill="#0F172A"/>
+  <circle cx="75" cy="70" r="2" fill="#0F172A"/>
+  <circle cx="85" cy="60" r="2" fill="#0F172A"/>
+</svg> 

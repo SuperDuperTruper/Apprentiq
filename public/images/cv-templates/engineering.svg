@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="120" rx="12" fill="#374151" fill-opacity="0.1"/>
+  <!-- Large Gear -->
+  <circle cx="60" cy="60" r="25" stroke="#374151" stroke-width="3" fill="none"/>
+  <circle cx="60" cy="60" r="20" stroke="#374151" stroke-width="2" fill="none"/>
+  <!-- Gear Teeth -->
+  <path d="M60 30 L60 35 M85 60 L90 60 M60 85 L60 90 M35 60 L30 60" stroke="#374151" stroke-width="4"/>
+  <path d="M77 43 L81 39 M77 77 L81 81 M43 77 L39 81 M43 43 L39 39" stroke="#374151" stroke-width="4"/>
+  <!-- Center -->
+  <circle cx="60" cy="60" r="5" fill="#374151"/>
+</svg> 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="120" rx="12" fill="#1E1E1E" fill-opacity="0.1"/>
+  <!-- Building -->
+  <path d="M30 90 L30 40 L60 20 L90 40 L90 90" stroke="#1E1E1E" stroke-width="3" fill="none"/>
+  <!-- Windows -->
+  <rect x="40" y="50" width="10" height="10" stroke="#1E1E1E" stroke-width="2" fill="none"/>
+  <rect x="55" y="50" width="10" height="10" stroke="#1E1E1E" stroke-width="2" fill="none"/>
+  <rect x="70" y="50" width="10" height="10" stroke="#1E1E1E" stroke-width="2" fill="none"/>
+  <rect x="40" y="70" width="10" height="10" stroke="#1E1E1E" stroke-width="2" fill="none"/>
+  <rect x="55" y="70" width="10" height="10" stroke="#1E1E1E" stroke-width="2" fill="none"/>
+  <rect x="70" y="70" width="10" height="10" stroke="#1E1E1E" stroke-width="2" fill="none"/>
+  <!-- Ground -->
+  <line x1="20" y1="90" x2="100" y2="90" stroke="#1E1E1E" stroke-width="3"/>
+</svg> 

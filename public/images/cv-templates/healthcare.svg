@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="120" rx="12" fill="#18181B" fill-opacity="0.1"/>
+  <!-- Medical Cross -->
+  <rect x="45" y="30" width="30" height="60" rx="4" fill="#18181B"/>
+  <rect x="30" y="45" width="60" height="30" rx="4" fill="#18181B"/>
+  <!-- DNA Helix -->
+  <path d="M85 30 C95 40, 75 50, 85 60 C95 70, 75 80, 85 90" stroke="#18181B" stroke-width="2" fill="none"/>
+  <path d="M95 30 C105 40, 85 50, 95 60 C105 70, 85 80, 95 90" stroke="#18181B" stroke-width="2" fill="none"/>
+  <!-- Connection Points -->
+  <circle cx="85" cy="45" r="2" fill="#18181B"/>
+  <circle cx="95" cy="45" r="2" fill="#18181B"/>
+  <circle cx="85" cy="75" r="2" fill="#18181B"/>
+  <circle cx="95" cy="75" r="2" fill="#18181B"/>
+</svg> 

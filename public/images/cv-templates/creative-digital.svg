@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="120" rx="12" fill="#9333EA" fill-opacity="0.1"/>
+  <!-- Paint Palette -->
+  <path d="M30 60 C30 45, 45 30, 60 30 C75 30, 90 45, 90 60 C90 75, 75 90, 60 90 C45 90, 30 75, 30 60" stroke="#9333EA" stroke-width="3" fill="none"/>
+  <!-- Color Dots -->
+  <circle cx="45" cy="45" r="5" fill="#9333EA"/>
+  <circle cx="75" cy="45" r="5" fill="#9333EA"/>
+  <circle cx="45" cy="75" r="5" fill="#9333EA"/>
+  <circle cx="75" cy="75" r="5" fill="#9333EA"/>
+  <!-- Paintbrush -->
+  <path d="M50 50 L70 70" stroke="#9333EA" stroke-width="4" stroke-linecap="round"/>
+  <!-- Digital Elements -->
+  <rect x="55" y="55" width="10" height="10" fill="#9333EA"/>
+  <circle cx="60" cy="60" r="2" fill="white"/>
+</svg> 

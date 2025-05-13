@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="120" rx="12" fill="#14213D" fill-opacity="0.1"/>
+  <!-- Building Columns -->
+  <rect x="30" y="40" width="15" height="50" rx="2" stroke="#14213D" stroke-width="3" fill="none"/>
+  <rect x="52.5" y="40" width="15" height="50" rx="2" stroke="#14213D" stroke-width="3" fill="none"/>
+  <rect x="75" y="40" width="15" height="50" rx="2" stroke="#14213D" stroke-width="3" fill="none"/>
+  <!-- Roof -->
+  <path d="M20 40 L100 40" stroke="#14213D" stroke-width="3"/>
+  <!-- Base -->
+  <rect x="15" y="90" width="90" height="5" fill="#14213D"/>
+  <!-- Dollar Symbol -->
+  <path d="M55 25 L65 25 M60 20 L60 30" stroke="#14213D" stroke-width="3"/>
+</svg> 
