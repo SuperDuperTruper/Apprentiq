@@ -14,10 +14,7 @@ import { Progress } from '@/components/ui/progress';
 import { 
   FileText, 
   Pencil, 
-  Eye, 
-  Download,
   CheckCircle,
-  ArrowLeft,
   Sparkles
 } from 'lucide-react';
 import { templates, CVTemplate } from './templates';

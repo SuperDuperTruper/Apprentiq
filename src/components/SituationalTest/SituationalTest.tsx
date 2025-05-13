@@ -2,12 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
@@ -390,9 +385,8 @@ export default function SituationalTest() {
         setTimeLeft((prev) => prev - 1);
       }, 1000);
       return () => clearInterval(timer);
-    } else if (timeLeft === 0 && testStarted && !isTestComplete) {
-      handleNextQuestion();
     }
+    return () => {}; // Add empty cleanup function for when condition is false
   }, [timeLeft, testStarted, isTestComplete]);
 
   const formatTime = (seconds: number) => {

@@ -6,8 +6,6 @@ import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
-  CardHeader,
-  CardTitle,
 } from '@/components/ui/card';
 import { templates, CVTemplate } from './templates';
 import { CVFormData } from './types';

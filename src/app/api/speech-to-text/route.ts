@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 import OpenAI from 'openai';
-import { verifyAuth, createErrorResponse } from '@/lib/auth-helpers';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -8,13 +7,6 @@ const openai = new OpenAI({
 
 export async function POST(request: Request) {
   try {
-    const authHeader = request.headers.get('Authorization');
-    // Verify authentication and roles
-    const authResult = await verifyAuth(authHeader);
-    if ('error' in authResult) {
-      return createErrorResponse(authResult.error, authResult.status);
-    }
-
     const formData = await request.formData();
     const audioFile = formData.get('audio');
 

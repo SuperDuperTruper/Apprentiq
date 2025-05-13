@@ -5,25 +5,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
-import { 
-  Calculator,
-  ChevronRight,
+import {
   Timer,
   BarChart,
-  LineChart,
-  PieChart,
   TrendingUp,
   BookOpen
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { getRandomQuestions } from './questions';
-import { Question } from './types';
-import dynamic from 'next/dynamic';
-
-// Dynamically import chart components with no SSR
-const LineGraph = dynamic(() => import('./graphs/LineGraph'), { ssr: false });
-const BarGraph = dynamic(() => import('./graphs/BarGraph'), { ssr: false });
-const PieGraph = dynamic(() => import('./graphs/PieGraph'), { ssr: false });
+import { Question, GraphData, TableData } from './types';
 
 export default function NumericalTest() {
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -47,9 +37,8 @@ export default function NumericalTest() {
         setTimeLeft((prev) => prev - 1);
       }, 1000);
       return () => clearInterval(timer);
-    } else if (timeLeft === 0 && !showExplanation && testStarted) {
-      handleNextQuestion();
     }
+    return () => {}; // Add empty cleanup function for when condition is false
   }, [timeLeft, showExplanation, testStarted]);
 
   const handleStartTest = () => {
@@ -95,7 +84,6 @@ export default function NumericalTest() {
       >
         <Card className="p-8 bg-gradient-to-br from-gray-800 to-gray-900 border-gray-700">
           <div className="flex items-center space-x-3 mb-6">
-            <Calculator className="w-8 h-8 text-blue-500" />
             <h1 className="text-3xl font-bold text-white">Numerical Reasoning Test</h1>
           </div>
           
@@ -156,7 +144,6 @@ export default function NumericalTest() {
     <div className="max-w-4xl mx-auto p-6">
       <div className="flex justify-between items-center mb-8">
         <div className="flex items-center space-x-4">
-          <Calculator className="w-6 h-6 text-blue-500" />
           <h2 className="text-2xl font-bold text-white">Question {currentQuestion + 1}</h2>
         </div>
         <div className="flex items-center space-x-2">
@@ -180,36 +167,49 @@ export default function NumericalTest() {
               {currentQ.question}
             </p>
 
-            {currentQ.type !== 'calculation' && currentQ.data && (
-              <div className="mb-6 bg-gray-700/30 p-4 rounded-lg">
-                {currentQ.type === 'graph' && currentQ.data.type === 'line' && (
-                  <LineGraph data={currentQ.data} />
-                )}
-                {currentQ.type === 'graph' && currentQ.data.type === 'bar' && (
-                  <BarGraph data={currentQ.data} />
-                )}
-                {currentQ.type === 'graph' && currentQ.data.type === 'pie' && (
-                  <PieGraph data={currentQ.data} />
+            {currentQ.data && (
+              <div className="mt-6 p-4 bg-gray-800/50 rounded-lg">
+                {currentQ.type === 'graph' && (
+                  <div className="w-full h-64">
+                    {(currentQ.data as GraphData).type === 'bar' && (
+                      <BarChart className="w-full h-full" />
+                    )}
+                    {(currentQ.data as GraphData).type === 'line' && (
+                      <TrendingUp className="w-full h-full" />
+                    )}
+                  </div>
                 )}
                 {currentQ.type === 'table' && (
-                  <table className="w-full text-gray-300">
-                    <thead>
-                      <tr>
-                        {currentQ.data.headers.map((header, i) => (
-                          <th key={i} className="p-2 border-b border-gray-600">{header}</th>
-                        ))}
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {currentQ.data.rows.map((row, i) => (
-                        <tr key={i}>
-                          {row.map((cell, j) => (
-                            <td key={j} className="p-2 border-b border-gray-600">{cell}</td>
+                  <div className="overflow-x-auto">
+                    <table className="min-w-full divide-y divide-gray-700">
+                      <thead>
+                        <tr>
+                          {(currentQ.data as TableData).headers.map((header: string, i: number) => (
+                            <th
+                              key={i}
+                              className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
+                            >
+                              {header}
+                            </th>
                           ))}
                         </tr>
-                      ))}
-                    </tbody>
-                  </table>
+                      </thead>
+                      <tbody className="divide-y divide-gray-700">
+                        {(currentQ.data as TableData).rows.map((row: (string | number)[], i: number) => (
+                          <tr key={i}>
+                            {row.map((cell: string | number, j: number) => (
+                              <td
+                                key={j}
+                                className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+                              >
+                                {cell}
+                              </td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
                 )}
               </div>
             )}
@@ -255,7 +255,7 @@ export default function NumericalTest() {
                     onClick={handleNextQuestion}
                     className="mt-4 w-full bg-blue-600 hover:bg-blue-700"
                   >
-                    Next Question <ChevronRight className="w-4 h-4 ml-2" />
+                    Next Question
                   </Button>
                 </motion.div>
               )}

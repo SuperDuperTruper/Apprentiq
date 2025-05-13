@@ -12,7 +12,6 @@ import {
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Progress } from '@/components/ui/progress';
 import { Textarea } from '@/components/ui/textarea';
 import { 
   Plus,
@@ -27,7 +26,6 @@ import {
   BookOpen
 } from 'lucide-react';
 import { CVFormData } from './types';
-import { CVTemplate } from './templates';
 
 interface CVFormProps {
   template: string;
@@ -37,7 +35,7 @@ interface CVFormProps {
   onNext: () => void;
 }
 
-export default function CVForm({ template, formData, setFormData, onBack, onNext }: CVFormProps) {
+export default function CVForm({ formData, setFormData, onBack, onNext }: CVFormProps) {
   const [currentSection, setCurrentSection] = useState<keyof CVFormData>('personalInfo');
 
   const sections = [
@@ -113,15 +111,26 @@ export default function CVForm({ template, formData, setFormData, onBack, onNext
     });
   };
 
-  const updateExperience = (index: number, field: keyof typeof formData.experience[0], value: string | boolean) => {
+  const updateExperience = (
+    index: number,
+    field: keyof typeof formData.experience[0],
+    value: string | boolean | string[]
+  ) => {
     const newExperience = [...formData.experience];
-    newExperience[index] = {
-      ...newExperience[index],
-      [field]: value
-    };
+    if (field === 'description' && typeof value === 'string') {
+      newExperience[index] = {
+        ...newExperience[index],
+        description: value.split('\n')
+      };
+    } else {
+      newExperience[index] = {
+        ...newExperience[index],
+        [field]: value
+      };
+    }
     setFormData({
       ...formData,
-      experience: newExperience
+      experience: newExperience,
     });
   };
 
@@ -448,7 +457,7 @@ export default function CVForm({ template, formData, setFormData, onBack, onNext
                           <Label>Description</Label>
                           <Textarea
                             value={exp.description.join('\n')}
-                            onChange={(e) => updateExperience(index, 'description', e.target.value.split('\n'))}
+                            onChange={(e) => updateExperience(index, 'description', e.target.value)}
                             placeholder="• Developed and maintained..."
                             className="h-32"
                           />

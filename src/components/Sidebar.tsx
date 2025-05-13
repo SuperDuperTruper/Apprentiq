@@ -3,7 +3,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { buttonStyles, textStyles } from '@/styles/shared';
 
 interface SidebarProps {
   isOpen: boolean;

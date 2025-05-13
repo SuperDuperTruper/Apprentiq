@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { buttonStyles, containerStyles, textStyles } from '@/styles/shared';
+import { containerStyles, textStyles } from '@/styles/shared';
 
 const footerLinks = {
   product: [

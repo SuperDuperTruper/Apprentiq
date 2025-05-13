@@ -1,25 +1,9 @@
 'use client';
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { buttonStyles, containerStyles, textStyles, backgroundStyles } from '@/styles/shared';
 
 export default function CTA() {
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus('loading');
-    
-    // Simulate API call
-    setTimeout(() => {
-      setStatus('success');
-      setEmail('');
-    }, 1000);
-  };
-
   return (
     <section className={containerStyles.section}>
       {/* Background effects */}

@@ -16,7 +16,7 @@ import {
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import Image from 'next/image';
-import { questionPool, getRandomQuestions } from './questions';
+import { getRandomQuestions } from './questions';
 
 interface Question {
   id: number;
@@ -52,9 +52,8 @@ export default function LogicalTest() {
         setTimeLeft((prev) => prev - 1);
       }, 1000);
       return () => clearInterval(timer);
-    } else if (timeLeft === 0 && !showExplanation && testStarted) {
-      handleNextQuestion();
     }
+    return () => {}; // Add empty cleanup function for when condition is false
   }, [timeLeft, showExplanation, testStarted]);
 
   const formatTime = (seconds: number) => {

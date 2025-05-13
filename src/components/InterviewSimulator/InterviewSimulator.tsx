@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   Card,
   CardContent,
@@ -10,7 +9,6 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Progress } from '@/components/ui/progress';
 import { Slider } from '@/components/ui/slider';
@@ -18,14 +16,10 @@ import {
   Play,
   Pause,
   StopCircle,
-  Mic,
   Video,
   Clock,
-  Settings,
-  ChevronRight,
   Volume2,
   VolumeX,
-  AlertCircle,
 } from 'lucide-react';
 
 interface Question {
@@ -156,10 +150,9 @@ export default function InterviewSimulator() {
           };
 
           recorder.onstop = () => {
-            const blob = new Blob(chunksRef.current, { type: 'video/webm' });
             // Handle recording completion
-            const url = URL.createObjectURL(blob);
             // You can save the recording or process it further here
+            // const blob = new Blob(chunksRef.current, { type: 'video/webm' });
           };
 
           // Initialize speech recognition in main thread

@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { buttonStyles, textStyles } from '@/styles/shared';
+import { buttonStyles } from '@/styles/shared';
 
 export default function Navbar() {
   const pathname = usePathname();
